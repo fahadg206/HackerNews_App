@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import MainNews from './MainNews';
 
 
 const SearchBar = () => {
@@ -7,16 +8,21 @@ const SearchBar = () => {
 
     return (
         <div>
-            <div className="ui input focus">
-                <input 
-                type="text" 
-                placeholder="Search..."
-                onChange={(e) => {
-                    setInput(e.target.value)
-                    console.log(input)
-                } } 
-                />
-            </div>
+            <form onSubmit={(e) => {
+                e.preventDefault()
+                setInput(e.target.value)
+            }}>
+                <div>
+                    <input 
+                    type="text" 
+                    // value={input}
+                    // onChange={(e) => {
+                    //     setInput(e.target.value)
+                    // } } 
+                    />
+                </div>
+            </form>
+            <MainNews term={input} />
         </div>
     )
 }
