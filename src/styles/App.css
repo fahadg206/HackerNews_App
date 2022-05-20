@@ -1,0 +1,9 @@
+.container {
+    display: grid;
+    grid-template-rows: 100px 100px;
+    grid-template-columns: 3fr 1fr;
+}
+
+.popular {
+    background-color: blue;
+}
