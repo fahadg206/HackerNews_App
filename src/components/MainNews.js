@@ -17,12 +17,18 @@ const MainNews = ({ term }) => {
       })
     }, [term])
 
+    console.log(articles)
   const news = articles.map(article => {
     return (
-      <div key={article.title}>
-        <h3>{article.title}</h3>
-        <p>{article.description}</p>
-        <p>{article.content}</p>
+      <div className='card' key={article.title}>
+        <div className='image'>
+          <img src={article.urlToImage} />
+        </div>
+        <div className='content'>
+          <h3>{article.title}</h3>
+          <p>{article.author}</p>
+          <p>{article.description}</p>
+        </div>
       </div>
     )
   })

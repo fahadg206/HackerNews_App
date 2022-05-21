@@ -1,9 +1,28 @@
 .container {
     display: grid;
+    
     grid-template-rows: 100px 100px;
     grid-template-columns: 3fr 1fr;
 }
 
 .popular {
     background-color: blue;
+}
+
+.card img {
+    height: 80px;
+    width: 80px;
+}
+
+.card {
+    display: flex;
+    width: 35%;
+}
+
+.content {
+
+}
+
+.image {
+    
 }
