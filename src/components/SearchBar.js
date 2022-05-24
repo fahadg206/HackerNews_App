@@ -14,14 +14,19 @@ const SearchBar = () => {
                     <input 
                     className='input'
                     type="text" 
-                    value={input}
+                    
                     onChange={(e) => {
                         setInput(e.target.value)
                     } } 
                     />
+                    <button
+                    onClick={() => {
+                       
+                    }}
+                    >Search</button>
                 </div>
             </div>
-            <MainNews term={input} />
+            <MainNews input={input} />
         </div>
     )
 }

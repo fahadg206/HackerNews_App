@@ -2,22 +2,30 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 
-const MainNews = ({ term }) => {
+
+
+const MainNews = ({ input }) => {
 
   const [articles, setArticles] = useState([])
 
-    useEffect(() => {
-      axios.get("https://newsapi.org/v2/everything", {
-        params: {
-          apiKey: "b74f4d2c7b824f94929199595d382465",
-          q: term
-        }
-      }).then((res) => {
-        setArticles(res.data.articles)
-      })
-    }, [term])
+  const fetchData = async () => {
+    const res = await axios.get("https://newsapi.org/v2/everything", {
+      params: {
+        apiKey: "b74f4d2c7b824f94929199595d382465",
+        q: input,
+        pageSize: 10
+      }
+    })
 
-    console.log(articles)
+    setArticles(res.data.articles)
+  }
+
+    useEffect(() => {
+      fetchData()
+    }, [input])
+
+  console.log(articles)
+  
   const news = articles.map(article => {
     return (
       <div className='card' key={article.title}>
@@ -34,7 +42,9 @@ const MainNews = ({ term }) => {
   })
 
     return (
-      <div>{news}</div>
+      <div>
+        {news}
+      </div>
     )
 }
 

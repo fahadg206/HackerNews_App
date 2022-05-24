@@ -5,11 +5,17 @@ import PopularNews from "./components/PopularNews";
 import "./styles/App.css"
 
 
+
 const App = () => {
     return (
             <div className="container">
-                <SearchBar />
-                <PopularNews />
+                <div className="search-spantwo">
+                   <SearchBar /> 
+                </div>
+                <div className="popular">
+                    <PopularNews />
+                </div>
+                
             </div>
          
     ) 

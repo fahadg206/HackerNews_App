@@ -18,14 +18,14 @@ useEffect(() => {
 
 const popularNews = topNews.map(top => {
   return (
-    <div className='card' key={article.title}>
+    <div className='card' key={top.title}>
         <div>
-          <img src={article.urlToImage} />
+          <img src={top.urlToImage} />
         </div>
         <div>
-          <h3>{article.title}</h3>
-          <p>{article.author}</p>
-          <p>{article.description}</p>
+          <h3>{top.title}</h3>
+          <p>{top.author}</p>
+          <p>{top.description}</p>
         </div>
       </div>
   )
