@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-
 const PopularNews = () => {
 
 const [topNews, setTopNews] = useState([])
@@ -36,4 +35,4 @@ const popularNews = topNews.map(top => {
   )
 }
 
-export default PopularNews
+export default PopularNews;
