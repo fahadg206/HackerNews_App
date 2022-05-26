@@ -1,13 +1,16 @@
 import React from "react";
 import SearchBar from "./components/SearchBar";
-import { BrowserRouter, Route } from "react-router-dom";
+import Header from "./components/Header";
 import PopularNews from "./components/PopularNews";
-import "./styles/App.css"
-
+import "./styles/App.css";
 
 
 const App = () => {
     return (
+        <div className="page">
+            <div className="header">
+                <Header />
+            </div>
             <div className="container">
                 <div className="search-spantwo">
                    <SearchBar /> 
@@ -17,7 +20,7 @@ const App = () => {
                 </div>
                 
             </div>
-         
+        </div>
     ) 
 }
 

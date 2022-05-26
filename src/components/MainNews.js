@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
 
 
+
 const MainNews = ({ input, articles }) => {
 
   const news = articles.map(article => {
     return (
       <div className='card' key={article.title}>
-        <div className='image'>
+        <div className='main-image'>
           <img src={article.urlToImage} />
         </div>
         <div className='content'>
-          <h3>{article.title}</h3>
-          <p>{article.author}</p>
-          <p>{article.description}</p>
+          <h3 className='title'><a href={article.url} target="_blank">{article.title}</a></h3>
+          <p className='author'>{article.author}</p>
+          <p className='summary'>{article.description}</p>
         </div>
       </div>
     )
   })
 
     return (
-      <div>
+      <div className='news-card'>
         {news}
       </div>
     )
