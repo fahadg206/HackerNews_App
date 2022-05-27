@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 const SearchBar = () => {
-
+    
     const [input, setInput] = useState("nba");
     const [articles, setArticles] = useState([])
 
@@ -46,7 +46,9 @@ const SearchBar = () => {
                     </div>
                 </form>
             </div>
-            <MainNews input={input} articles={articles} />
+            <div className='main'>
+                <MainNews input={input} articles={articles} />
+            </div>
         </div>
     )
 }

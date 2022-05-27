@@ -2,17 +2,20 @@
     color: white;
 }
 
-.container {
+.page {
     display: grid;
-    grid-template-columns: 50em 25em ;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
 
-    justify-content: center;
 }
 
 .header {
     display: flex;
     justify-content: center;
+    grid-column: span 3;
+
 }
+
 
 .nav {
     display: flex;
@@ -26,8 +29,13 @@
     width: 70%;
 }
 
+.searchbar {
+    grid-column: span 2;
+}
+
 .popular {
     margin-top: 50px;
+   
 }
 
 .card img {
@@ -35,10 +43,11 @@
     width: 80px;
 }
 
+
+
 .search {
     display: flex;
     justify-content: center;
-    margin-left: 350px;
     padding: 15px;
 }
 
@@ -94,3 +103,25 @@
     width: 200px;
     height: 100px;
 }
+
+
+
+@media only screen and (max-width: 600px) {
+    .page {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+    }
+    
+    .searchbar {
+        grid-column: span 2;
+    }
+
+    .header {
+        grid-row: span 2;
+    }
+
+    .popular {
+        grid-column: span 2;
+    }
+  }
