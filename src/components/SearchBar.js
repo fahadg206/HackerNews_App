@@ -11,9 +11,9 @@ const SearchBar = () => {
     const fetchData = async () => {
         const res = await axios.get("https://newsapi.org/v2/everything", {
         params: {
-            apiKey: "b74f4d2c7b824f94929199595d382465",
-            q: input,
-            pageSize: 8
+          apiKey: "b74f4d2c7b824f94929199595d382465",
+          q: input,
+          pageSize: 8
         }
         })
 
@@ -21,35 +21,35 @@ const SearchBar = () => {
     }
 
         useEffect(() => {
-            fetchData()
+        	fetchData()
         }, [])
 
     return (
-        <div>
-            <div className='ui form search'>
-                <form 
-                    className='field'
-                    onSubmit={(e) => {
-                        e.preventDefault()
-                        fetchData()
-                }}
-                >
-                    <div className='search-icon'>
-                        <label><i className="search icon"></i></label>
-                        <input 
-                            className='input'
-                            type="text" 
-                            onChange={(e) => {
-                                setInput(e.target.value)
-                            } } 
-                        />
-                    </div>
-                </form>
-            </div>
-            <div className='main'>
-                <MainNews input={input} articles={articles} />
-            </div>
-        </div>
+			<div>
+				<div className='ui form search'>
+					<form 
+						className='field'
+						onSubmit={(e) => {
+								e.preventDefault()
+								fetchData()
+					}}
+					>
+						<div className='search-icon'>
+							<label><i className="search icon"></i></label>
+							<input 
+								className='input'
+								type="text" 
+								onChange={(e) => {
+								setInput(e.target.value)
+								}} 
+								/>
+						</div>
+					</form>
+				</div>
+				<div className='main'>
+					<MainNews input={input} articles={articles} />
+				</div>
+			</div>
     )
 }
 

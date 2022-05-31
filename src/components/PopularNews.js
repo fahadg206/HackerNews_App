@@ -19,7 +19,7 @@ const PopularNews = () => {
     return (
       <div className='card' key={top.title}>
           <div>
-            <img src={top.urlToImage} />
+            <img className='pop-image' src={top.urlToImage} />
           </div>
           <div className='pop-content'>
             <h3 className='pop-title'><a href={top.url} target="_blank">{top.title}</a></h3>

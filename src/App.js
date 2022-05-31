@@ -6,19 +6,19 @@ import "./styles/App.css";
 
 
 const App = () => {
-    return (
-    <div className="page">
-        <div className="header">
-            <Header />
-        </div>
-        <div className="searchbar">
-            <SearchBar /> 
-        </div>
-        <div className="popular">
-            <PopularNews />
-        </div>
-    </div>
-    ) 
+		return (
+			<div className="page">
+				<div className="header">
+					<Header />
+				</div>
+				<div className="searchbar">
+					<SearchBar /> 
+				</div>
+				<div className="popular">
+					<PopularNews />
+				</div>
+			</div>
+		) 
 }
 
 export default App;

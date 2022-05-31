@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 
-
 const MainNews = ({ input, articles }) => {
 
   const news = articles.map(article => {
