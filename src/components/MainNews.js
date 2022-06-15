@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const MainNews = ({  articles }) => {
+const MainNews = ({ articles }) => {
 
   const news = articles.map(article => {
     return (
