@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 
-const MainNews = ({ input, articles }) => {
+const MainNews = ({  articles }) => {
 
   const news = articles.map(article => {
     return (
