@@ -21,3 +21,6 @@
 3. Open terminal and run **npm start** on the root folder.
 4. Search for any article you would like in the searchbar.
 
+## How to run the app in the browser
+- In the terminal run npm start. This will run the app in development mode, on port http://localhost:3000.
+
