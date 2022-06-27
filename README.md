@@ -17,6 +17,7 @@
 ## Quick Start
 
 1. Download zip file or clone the repository on your local machine, and open it up in your code editor.
-2. Open terminal and run **npm start** on the root folder.
-3. Search for any article you would like in the searchbar.
+2. In the terminal, run npm install to install all libraries/dependencies allowing you to use the HackerNews App.
+3. Open terminal and run **npm start** on the root folder.
+4. Search for any article you would like in the searchbar.
 
